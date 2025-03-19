@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+function celsiusToFahrenheit(celsius) 
+  {
+    return (celsius * 9/5) + 32;
+  }
+function fahrenheitToCelsius(fahrenheit) 
+  {
+    return (fahrenheit - 32) * 5/9;
+  }
+function convertTemperature() 
+{
+    let choice = prompt("Enter 'C' to convert Celsius to Fahrenheit or 'F' to convert Fahrenheit to Celsius:");
+
+    if (choice.toUpperCase() === 'C') 
+    {
+        let celsius = parseFloat(prompt("Enter temperature in Celsius:"));
+        if (!isNaN(celsius)) 
+        {
+            let fahrenheit = celsiusToFahrenheit(celsius);
+            alert(celsius + "°C is " + fahrenheit + "°F");
+        } 
+        else 
+        {
+            alert("Please enter a valid number for Celsius.");
+        }
+    } 
+    else if (choice.toUpperCase() === 'F') 
+    {
+        let fahrenheit = parseFloat(prompt("Enter temperature in Fahrenheit:"));
+        if (!isNaN(fahrenheit)) 
+        {
+            let celsius = fahrenheitToCelsius(fahrenheit);
+            alert(fahrenheit + "°F is " + celsius + "°C");
+        } 
+        else 
+        {
+            alert("Please enter a valid number for Fahrenheit.");
+        }
+    }
+    else 
+    {
+        alert("Invalid choice. Please enter 'C' or 'F'.");
+    }
+}
+convertTemperature();
+    </script>
+</body>
+</html>
+
+
+
