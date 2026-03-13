@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Contact</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="header">
+<ul class="nav">
+<li><a href="home.html">Home</a></li>
+<li><a href="menu.html">Menu</a></li>
+<li><a href="checkout.html">Cart</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+</header>
+
+<h2 class="title">Contact Us</h2>
+
+<p class="contact-info">📞 Phone: +91 9876543210</p>
+<p class="contact-info">📧 Email: cafe@gmail.com</p>
+<p class="contact-info">📍 Address: Ahmedabad</p>
+
+<hr>
+
+<h2 class="title">Feedback Form</h2>
+
+<form class="contact-form" onsubmit="return sendFeedback()">
+
+<input type="text" placeholder="Your Name" required>
+
+<input type="email" placeholder="Your Email" required>
+
+<textarea placeholder="Your Feedback" required></textarea>
+
+<button class="btn" type="submit">Send Feedback</button>
+
+</form>
+
+<footer class="footer">
+© 2026 Royal Coffee Cafe
+</footer>
+
+<script>
+function sendFeedback(){
+alert("Thank you for your feedback ☕");
+return false;
+}
+</script>
+
+</body>
+</html>

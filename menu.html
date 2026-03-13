@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title>Coffee Menu</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="header">
+<ul class="nav">
+<li><a href="home.html">Home</a></li>
+<li><a href="menu.html">Menu</a></li>
+<li><a href="checkout.html">Cart</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+</header>
+
+<h2 style="text-align:center;margin-top:20px;">Our Coffee Menu ☕</h2>
+
+<!-- HOT COFFEE -->
+
+<h2 style="text-align:center;margin-top:30px;">Hot Coffee 🔥</h2>
+
+<div class="card-grid">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1534778101976-62847782c213">
+<h3>Cappuccino</h3>
+<p>₹140</p>
+
+<div class="qty-box">
+<button onclick="changeQty(this,-1)">-</button>
+<span>0</span>
+<button onclick="changeQty(this,1)">+</button>
+</div>
+
+<button class="btn" onclick="addToCart(this,'Cappuccino',140)">Add to Cart</button>
+
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1511920170033-f8396924c348">
+<h3>Espresso</h3>
+<p>₹120</p>
+
+<div class="qty-box">
+<button onclick="changeQty(this,-1)">-</button>
+<span>0</span>
+<button onclick="changeQty(this,1)">+</button>
+</div>
+
+<button class="btn" onclick="addToCart(this,'Espresso',120)">Add to Cart</button>
+
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735">
+<h3>Latte</h3>
+<p>₹150</p>
+
+<div class="qty-box">
+<button onclick="changeQty(this,-1)">-</button>
+<span>0</span>
+<button onclick="changeQty(this,1)">+</button>
+</div>
+
+<button class="btn" onclick="addToCart(this,'Latte',150)">Add to Cart</button>
+
+</div>
+
+</div>
+
+<!-- COLD COFFEE -->
+
+<h2 style="text-align:center;margin-top:30px;">Cold Coffee 🧊</h2>
+
+<div class="card-grid">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085">
+<h3>Cold Coffee</h3>
+<p>₹160</p>
+
+<div class="qty-box">
+<button onclick="changeQty(this,-1)">-</button>
+<span>0</span>
+<button onclick="changeQty(this,1)">+</button>
+</div>
+
+<button class="btn" onclick="addToCart(this,'Cold Coffee',160)">Add to Cart</button>
+
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1485808191679-5f86510681a2">
+<h3>Iced Latte</h3>
+<p>₹170</p>
+
+<div class="qty-box">
+<button onclick="changeQty(this,-1)">-</button>
+<span>0</span>
+<button onclick="changeQty(this,1)">+</button>
+</div>
+
+<button class="btn" onclick="addToCart(this,'Iced Latte',170)">Add to Cart</button>
+
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93">
+<h3>Mocha Frappe</h3>
+<p>₹180</p>
+
+<div class="qty-box">
+<button onclick="changeQty(this,-1)">-</button>
+<span>0</span>
+<button onclick="changeQty(this,1)">+</button>
+</div>
+
+<button class="btn" onclick="addToCart(this,'Mocha Frappe',180)">Add to Cart</button>
+
+</div>
+
+</div>
+
+<!-- SPECIAL COFFEE -->
+
+<h2 style="text-align:center;margin-top:30px;">Special Coffee ⭐</h2>
+
+<div class="card-grid">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1507133750040-4a8f57021571">
+<h3>Caramel Latte</h3>
+<p>₹190</p>
+
+<div class="qty-box">
+<button onclick="changeQty(this,-1)">-</button>
+<span>0</span>
+<button onclick="changeQty(this,1)">+</button>
+</div>
+
+<button class="btn" onclick="addToCart(this,'Caramel Latte',190)">Add to Cart</button>
+
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31">
+<h3>Chocolate Coffee</h3>
+<p>₹200</p>
+
+<div class="qty-box">
+<button onclick="changeQty(this,-1)">-</button>
+<span>0</span>
+<button onclick="changeQty(this,1)">+</button>
+</div>
+
+<button class="btn" onclick="addToCart(this,'Chocolate Coffee',200)">Add to Cart</button>
+
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93">
+<h3>Hazelnut Coffee</h3>
+<p>₹210</p>
+
+<div class="qty-box">
+<button onclick="changeQty(this,-1)">-</button>
+<span>0</span>
+<button onclick="changeQty(this,1)">+</button>
+</div>
+
+<button class="btn" onclick="addToCart(this,'Hazelnut Coffee',210)">Add to Cart</button>
+
+</div>
+
+</div>
+
+<footer class="footer">
+© 2026 Royal Coffee Cafe
+</footer>
+
+<script>
+
+function changeQty(btn,val){
+
+let span=btn.parentElement.querySelector("span");
+let qty=parseInt(span.innerText)+val;
+
+if(qty<0) qty=0;
+
+span.innerText=qty;
+
+}
+
+function addToCart(btn,name,price){
+
+let qty=parseInt(btn.parentElement.querySelector("span").innerText);
+
+if(qty===0){
+alert("Please select quantity");
+return;
+}
+
+let cart=JSON.parse(localStorage.getItem("cart"))||[];
+
+cart.push({name,price,qty});
+
+localStorage.setItem("cart",JSON.stringify(cart));
+
+alert(name+" added to cart 🛒");
+
+btn.parentElement.querySelector("span").innerText=0;
+
+}
+
+</script>
+
+</body>
+</html>
